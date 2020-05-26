@@ -6,17 +6,17 @@ namespace Collections
 {
     class Passenger
     {
-        string lastName;
-        string firstName;
-        float age;
-        string paxClass;
-        bool isPassenger;
-        string role;
-        bool survivor;
+        public string LastName{ get; set; }
+        public string FirstName{ get; set; }
+        public float  Age{ get; set; }
+        public string PaxClass{ get; set; }
+        public bool   IsPassenger{ get; set; }
+        public string Role{ get; set; }
+        public bool   Survivor{ get; set; }
 
         public override string ToString()
         {
-            return $"{firstName} {lastName} was a {paxClass} and " + (survivor ? "survived" : "did not survive");
+            return $"{FirstName} {LastName} was a {PaxClass} and " + (Survivor ? "survived" : "did not survive");
         }
 
         public Passenger(string lastName, string firstName, float age, string paxClass, bool isPassenger, string role, bool survivor)
@@ -29,14 +29,6 @@ namespace Collections
             this.Role = role;
             this.Survivor = survivor;
         }
-
-        public string LastName { get => lastName; set => lastName = value; }
-        public string FirstName { get => firstName; set => firstName = value; }
-        public float Age { get => age; set => age = value; }
-        public string PaxClass { get => paxClass; set => paxClass = value; }
-        public bool IsPassenger { get => isPassenger; set => isPassenger = value; }
-        public string Role { get => role; set => role = value; }
-        public bool Survivor { get => survivor; set => survivor = value; }
 
         public static List<Passenger> LoadPassengers()
         {
@@ -53,8 +45,6 @@ namespace Collections
 
             foreach (string line in lines)
             {
-                //Console.WriteLine(line);
-
                 //  the first line is a header line, not data. Skip it
                 if (firstLine)
                 {
