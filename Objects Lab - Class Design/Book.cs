@@ -35,7 +35,7 @@ namespace Objects_Lab___Class_Design
         // This isn't a big deal since the editor really doesn't do much for you
         public override string ToString()
         {
-            return String.Format("{0} is {1} pages long was written by {2}\nBook description{3}", Title, Pages, Author, Description);
+            return String.Format("{0} is {1} pages long was written by {2}\nBook description: {3}", Title, Pages, Author, Description);
         }
     }
 }
