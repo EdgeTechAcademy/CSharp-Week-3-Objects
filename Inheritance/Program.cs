@@ -15,7 +15,7 @@ namespace Inheritance
 
             while (menuOption != 1)
             {
-                menuOption = GetNumber("1 - Exit\n2 - Create Checking\n3 - Create Savings");
+                menuOption = GetNumber("\n1 - Exit\n2 - Create Checking\t\t3 - Create Savings\n4 - Get Checking Balance\t5 - Get Savings Balance: ");
                 switch (menuOption)
                 {
                     //  exit the ATM
@@ -34,7 +34,14 @@ namespace Inheritance
                         savings = new Savings(accountName, balance, 0.02f);
                         break;
 
+                    case 4:         //  get Checking balance
+                        break;
+
+                    case 5:         //  get Savings balance
+                        break;
+
                     default:
+                        Console.WriteLine($"\nOption {menuOption} not recognized");
                         break;
                 }
             }
@@ -46,7 +53,7 @@ namespace Inheritance
             string str = Console.ReadLine();
             return str;
         }   // end of the GetInput method
-        
+
         public static int GetNumber(string prompt)
         {
             int userNumber;

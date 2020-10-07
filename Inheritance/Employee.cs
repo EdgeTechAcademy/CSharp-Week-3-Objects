@@ -5,9 +5,21 @@ namespace Inheritance
 {
     class Employee
     {
-        int     empId;
-        string  name;
-        string  department;
+        int empId;
+        string name;
+        string department;
+
+        static void Main(string[] args)
+        {
+            Employee emp1 = new Employee(100, "Hey You", "Call Center");
+            Manager mgr1 = new Manager(10, "Mr Smith", "IT", 10000);
+            CEO ceo1 = new CEO(1, "Madam", "Executive", 100000, "Row 1 Slot 1");
+        }
+
+        static void PrintEmpDetails(Employee emp)
+        {
+            Console.WriteLine($"{emp.Name} works in dept {emp.Department} ID: {emp.empId}");
+        }
 
         public override string ToString()
         {
@@ -67,4 +79,4 @@ namespace Inheritance
         }
         public string ParkingSpot { get => parkingSpot; set => parkingSpot = value; }
     }
-
+}

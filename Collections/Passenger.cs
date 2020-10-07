@@ -55,13 +55,10 @@ namespace Collections
                 string[] props = line.Split(",");
 
                 //  if the age field is empty set it to "0"
-                if (props[1].Length == 0) props[1] = "0";
-
-                //  the name field is both first and last name. They are separated with a slash
-                string[] names = props[0].Split("/");
+                if (props[2].Length == 0) props[2] = "0";
 
                 //  create a passenger from the properties
-                Passenger pax = new Passenger(names[0], names[1], float.Parse(props[1]), props[2], props[3].Equals("Passenger"), props[4], props[5].Equals("T"));
+                Passenger pax = new Passenger(props[0], props[1], float.Parse(props[2]), props[3], props[4].Equals("Passenger"), props[5], props[6].Equals("T"));
 
                 //  add individual passenger to the list of passengers
                 passengers.Add(pax);

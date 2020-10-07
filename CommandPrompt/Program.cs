@@ -10,7 +10,7 @@ namespace CommandWindow
             string  color;
 
             int     windowSize = GetNumber("How big do you want your window? ", 30);
-            CommandPrompt monitor = new CommandPrompt(windowSize);
+            CommandPrompt monitor = new CommandPrompt(windowSize, GetInput("Title? "));
 
             do
             {

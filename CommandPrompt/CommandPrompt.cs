@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Reflection;
 
 namespace CommandWindow
 {
@@ -10,8 +11,9 @@ namespace CommandWindow
         string[] screenText;
         int height;
 
-        public CommandPrompt(int height)
+        public CommandPrompt(int height, string title)
         {
+            Console.Title = title;
             this.height = height;
 
             // set the backgroundColor to some default

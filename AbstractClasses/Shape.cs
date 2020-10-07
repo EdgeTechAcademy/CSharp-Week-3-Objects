@@ -6,7 +6,7 @@ namespace AbstractClasses
 {
     abstract class Shape
     {
-        // Classes extendding Shape require the GetArea method to avoid a compile-time error
+        // Classes extending Shape require the GetArea method to avoid a compile-time error
         public abstract double GetArea();
     }
 
@@ -27,8 +27,10 @@ namespace AbstractClasses
     class Triangle : Shape
     {
         double height, width;
-        public Triangle(double height, double width) {
-            this.height = height; this.width = width; 
+        public Triangle(double height, double width)
+        {
+            this.height = height; 
+            this.width = width;
         }
         public override double GetArea() => .5 * height * width;
     }
